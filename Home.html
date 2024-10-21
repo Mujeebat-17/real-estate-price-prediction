@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate</title>
+    
+     <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- css file link  -->
+   <link rel="stylesheet" href="style.css">
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8yelb8bRZRJaCOiyhgaN-suB46E9uMVU"></script>
+</head>
+<body>
+    <div class="home">
+      <section class="container">
+        <div class="right">
+            <div class="form-container">
+                <h1>Enter the attributes of the housing.</h1>
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label>Number of Room</label>
+                        <div class="number-input">
+                            <input type="number" value="0" id="number-of-rooms" min="0">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label>Apartment</label>
+                        <select id="apartment-type" required>
+                            <option value="1">singlet</option>
+                            <option value="2">duplex</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Roofing</label>
+                        <select  id="roofing-type" required>
+                            <option value="1">pop</option>
+                            <option value="2">ceiling</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Gate(present)</label>
+                        <select id="gate-present" required>
+                            <option value="1" >Yes</option>
+                            <option value="2">No</option>
+                        </select>
+                    </div>
+                    <div class="address-generator">
+                        <label>Generate Random Address</label> 
+                        <button id="generate-address">Random Address</button>
+                      </div>
+                      <div class="price">
+                        <label>Price</label> 
+                        <input type="text" class="small-btn" value="#" readonly > 
+                      </div>
+                </div>
+                    <div class="address-input">
+                        <label>Address</label> 
+                       <input type="text" id="address-result" value="address" >  
+                    </div>
+
+                    <p class="hint">Press the button below to mark the address in the map.</p>
+                    <div>
+                        
+                        <button id="locate-button" >locate</button>
+                      </div>
+                      <div>
+                        <button class="big-btn" id="predict-button" >Predict</button>
+                      </div>
+                </div>
+               
+        </div>
+        <div class="left">
+            <div class="map-container">
+                <button class="clear-markers">Clear markers</button>
+                <div id="map">
+                </div>
+            </div>
+        </div>
+      </section>
+    </div>
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="script.js"></script>
+</html>
